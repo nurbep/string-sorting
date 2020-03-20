@@ -6,31 +6,29 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		
-		System.out.println(sortString("When not studying nuclear physics, Bambi likes to play beach volleyball."));
-		    
+		System.out.println(sortString("When not studying nuclear physics, Bambi likes to play beach volleyball."));    
 	}
 	
 	static char[] sortString(String inputString) {
-		 
-		// remove punctuation
-
-		String  stringWithoutPunc = inputString.replaceAll("\\p{Punct}", "");
+		
+		
+	     String outputString;
+		
+	     // remove punctuation
+	     outputString = inputString.replaceAll("\\p{Punct}", "");
 		    
-	    //remove whitespace
-		String  stringWithoutWhiteSpace = stringWithoutPunc.replaceAll("\\s+", "");
+	      //remove whitespace
+	      outputString = outputString.replaceAll("\\s+", "");
 		   
-		 //change to lowercase
+	      //change to lowercase
+	      outputString = outputString.toLowerCase();
 
-		String  stringWithLowercase = stringWithoutWhiteSpace.toLowerCase();
-
-		 // sort string alphabetically
-
-		  char[] arr = stringWithLowercase.toCharArray();
+	      // sort string alphabetically
+	      char[] arr = outputString.toCharArray();
 		    
-		  Arrays.sort(arr);
+	      Arrays.sort(arr);
 		  
-		  return arr;
+	      return arr;
 		
 	}
 
